@@ -22,6 +22,7 @@ public class ControllerServlet extends HttpServlet {
 
     	String paramAcao = request.getParameter("acao");
     	String nomeDaClasse = "br.com.veloweb.flyweb.acao."+paramAcao;
+    	System.out.println(nomeDaClasse);
     	String nome;
     	
     	
