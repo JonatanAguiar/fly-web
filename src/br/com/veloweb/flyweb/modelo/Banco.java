@@ -1,6 +1,7 @@
 package br.com.veloweb.flyweb.modelo;
 
 import java.util.ArrayList;
+import java.util.Calendar;
 import java.util.List;
 
 
@@ -8,7 +9,8 @@ public class Banco {
 
 	private static List<Usuario> listaDeUsuarios = new ArrayList<>();
 	private static List<Voo> listaDeVoos = new ArrayList<>();
-	
+	private static List<Aviao> listaDeAvioes = new ArrayList<>();
+ 	
 	static {
 		//Cria país
 		
@@ -57,12 +59,12 @@ public class Banco {
 		Aviao aviao2 = new Aviao();
 		
 		aviao1.setId(1);
-		aviao1.setInternacional(true);
+		aviao1.setTipo(true);
 		aviao1.setModelo("747");
 		aviao1.setNome("Sergio");
 		
 		aviao2.setId(2);
-		aviao2.setInternacional(false);
+		aviao2.setTipo(false);
 		aviao2.setModelo("12");
 		aviao2.setNome("Alejandro");
 		
@@ -70,6 +72,13 @@ public class Banco {
 		
 		Voo voo1 = new Voo();
 		Voo voo2 = new Voo();
+		
+		voo1.setAviao(aviao1);
+		voo1.setRota(rota1);
+		voo1.setId(1);
+		
+		listaDeVoos.add(voo1);
+		
 		
 		Usuario user1 = new Usuario();
 		Usuario user2 = new Usuario();
@@ -93,4 +102,7 @@ public class Banco {
 		return null;
 	}
 	
+	public List<Voo> getVoos(){
+		return listaDeVoos;
+	}
 }

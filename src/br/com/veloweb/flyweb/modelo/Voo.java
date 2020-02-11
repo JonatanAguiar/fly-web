@@ -39,5 +39,9 @@ public class Voo {
 	public void setDataEHora(LocalDateTime dataEHora) {
 		this.dataEHora = dataEHora;
 	}
+	public void setId(Integer id) {
+		this.id = id;
+	}
+
 	
 }

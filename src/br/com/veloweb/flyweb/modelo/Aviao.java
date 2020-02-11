@@ -5,7 +5,7 @@ public class Aviao {
 	private Integer id;
 	private String nome;
 	private String modelo;
-	private boolean internacional;
+	private boolean tipo;
 	
 	public Integer getId() {
 		return id;
@@ -16,9 +16,6 @@ public class Aviao {
 	public String getModelo() {
 		return modelo;
 	}
-	public boolean isInternacional() {
-		return internacional;
-	}
 	public void setId(Integer id) {
 		this.id = id;
 	}
@@ -28,10 +25,10 @@ public class Aviao {
 	public void setModelo(String modelo) {
 		this.modelo = modelo;
 	}
-	public void setInternacional(boolean internacional) {
-		this.internacional = internacional;
+	public boolean isTipo() {
+		return tipo;
 	}
-	
-	
-	
+	public void setTipo(boolean tipo) {
+		this.tipo = tipo;
+	}
 }
