@@ -15,6 +15,15 @@ public class Cidade {
 	public Pais getPais() {
 		return pais;
 	}
+	public void setId(Integer id) {
+		this.id = id;
+	}
+	public void setNome(String nome) {
+		this.nome = nome;
+	}
+	public void setPais(Pais pais) {
+		this.pais = pais;
+	}
 	
 	
 }

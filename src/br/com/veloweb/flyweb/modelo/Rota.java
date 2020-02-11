@@ -15,5 +15,14 @@ public class Rota {
 	public Cidade getCidadeDestino() {
 		return cidadeDestino;
 	}
+	public void setId(Integer id) {
+		this.id = id;
+	}
+	public void setCidadeOrigem(Cidade cidadeOrigem) {
+		this.cidadeOrigem = cidadeOrigem;
+	}
+	public void setCidadeDestino(Cidade cidadeDestino) {
+		this.cidadeDestino = cidadeDestino;
+	}
 	
 }

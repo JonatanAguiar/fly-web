@@ -7,7 +7,6 @@ public class VooCadastraForm implements Acao{
 
 	@Override
 	public String executa(HttpServletRequest request, HttpServletResponse response) {
-		// TODO Auto-generated method stub
 		return "fw:formCadastroVoo.jsp";
 	}
 
