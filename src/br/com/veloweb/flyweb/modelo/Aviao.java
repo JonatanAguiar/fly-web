@@ -19,6 +19,18 @@ public class Aviao {
 	public boolean isInternacional() {
 		return internacional;
 	}
+	public void setId(Integer id) {
+		this.id = id;
+	}
+	public void setNome(String nome) {
+		this.nome = nome;
+	}
+	public void setModelo(String modelo) {
+		this.modelo = modelo;
+	}
+	public void setInternacional(boolean internacional) {
+		this.internacional = internacional;
+	}
 	
 	
 	

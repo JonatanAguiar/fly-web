@@ -18,11 +18,13 @@ import br.com.veloweb.flyweb.acao.Acao;
 public class ControllerServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
-    protected void servlet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+    protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
     	String paramAcao = request.getParameter("acao");
-    	String nomeDaClasse = "br.com.veloweb.flyweb.acao"+paramAcao;
+    	System.out.println(paramAcao);
+    	String nomeDaClasse = "br.com.veloweb.flyweb.acao."+paramAcao;
     	String nome;
+    	
     	
     	try {
     		Class classe = Class.forName(nomeDaClasse);
@@ -33,11 +35,11 @@ public class ControllerServlet extends HttpServlet {
 		}
     	
     	String[] tipoEEndereco = nome.split(":");
-    	if(tipoEEndereco[0].equals("forward")) {
+    	if(tipoEEndereco[0].equals("fw")) {
 			RequestDispatcher rd = request.getRequestDispatcher("/WEB-INF/view/"+tipoEEndereco[1]);
 			rd.forward(request, response);
 		} else {
-			response.sendRedirect("entrada?acao="+tipoEEndereco[1]);
+			response.sendRedirect("index?acao="+tipoEEndereco[1]);
 		}
     }
 
