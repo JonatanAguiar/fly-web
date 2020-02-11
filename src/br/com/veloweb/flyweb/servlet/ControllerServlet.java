@@ -21,7 +21,6 @@ public class ControllerServlet extends HttpServlet {
     protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
     	String paramAcao = request.getParameter("acao");
-    	System.out.println(paramAcao);
     	String nomeDaClasse = "br.com.veloweb.flyweb.acao."+paramAcao;
     	String nome;
     	
