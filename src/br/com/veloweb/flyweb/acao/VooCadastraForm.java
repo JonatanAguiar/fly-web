@@ -7,6 +7,7 @@ public class VooCadastraForm implements Acao{
 
 	@Override
 	public String executa(HttpServletRequest request, HttpServletResponse response) {
+		
 		return "fw:formCadastroVoo.jsp";
 	}
 
