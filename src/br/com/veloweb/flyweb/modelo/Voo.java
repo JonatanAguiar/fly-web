@@ -4,11 +4,23 @@ import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Voo {
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+import javax.persistence.ManyToMany;
+import javax.persistence.ManyToOne;
 
+@Entity
+public class Voo {
+	
+	@Id
+	@GeneratedValue
 	private Integer id;
+	@ManyToOne
 	private Rota rota;
+	@ManyToMany
 	private List<Cidade> escalas = new ArrayList<Cidade>();
+	@ManyToOne
 	private Aviao aviao;
 	private LocalDateTime dataEHora;
 	
