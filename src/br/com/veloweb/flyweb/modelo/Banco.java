@@ -9,7 +9,11 @@ public class Banco {
 	private static List<Usuario> listaDeUsuarios = new ArrayList<>();
 	private static List<Voo> listaDeVoos = new ArrayList<>();
 	private static List<Aviao> listaDeAvioes = new ArrayList<>();
+<<<<<<< HEAD
 	private static Integer contadorDeAvioes = 1;
+=======
+	private static List<Rota> listaDeRotas = new ArrayList<>();
+>>>>>>> ed25838e51a5d97b6b2566c1175b3626f1ac39c5
 
 	static {
 		// Cria país
@@ -53,6 +57,10 @@ public class Banco {
 		rota1.setCidadeDestino(cidade4);
 		rota1.setCidadeOrigem(cidade1);
 
+		Rota rota2 = new Rota();
+		rota1.setCidadeDestino(cidade3);
+		rota1.setCidadeOrigem(cidade2);
+
 		// Cria aviões
 
 		Aviao aviao1 = new Aviao();
@@ -94,6 +102,10 @@ public class Banco {
 
 		listaDeUsuarios.add(user1);
 		listaDeUsuarios.add(user2);
+
+		listaDeRotas.add(rota1);
+		listaDeRotas.add(rota2);
+
 	}
 
 	public Usuario usuarioExiste(String login, String senha) {
@@ -113,8 +125,13 @@ public class Banco {
 		return listaDeAvioes;
 	}
 
+<<<<<<< HEAD
 	public void adicionaAviao(Aviao aviao) {
 		aviao.setId(contadorDeAvioes++);
 		listaDeAvioes.add(aviao);
+=======
+	public List<Rota> getRotas(){
+		return listaDeRotas;
+>>>>>>> ed25838e51a5d97b6b2566c1175b3626f1ac39c5
 	}
 }
