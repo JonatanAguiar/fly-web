@@ -65,6 +65,9 @@ public class Banco {
 		aviao2.setTipo(false);
 		aviao2.setModelo("12");
 		aviao2.setNome("Alejandro");
+		
+		listaDeAvioes.add(aviao1);
+		listaDeAvioes.add(aviao2);
 
 		// Cria voo
 
