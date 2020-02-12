@@ -9,6 +9,7 @@ public class Banco {
 	private static List<Usuario> listaDeUsuarios = new ArrayList<>();
 	private static List<Voo> listaDeVoos = new ArrayList<>();
 	private static List<Aviao> listaDeAvioes = new ArrayList<>();
+	private static Integer contadorDeAvioes = 1;
 
 	static {
 		// Cria país
@@ -110,5 +111,10 @@ public class Banco {
 
 	public List<Aviao> getAvioes() {
 		return listaDeAvioes;
+	}
+
+	public void adicionaAviao(Aviao aviao) {
+		aviao.setId(contadorDeAvioes++);
+		listaDeAvioes.add(aviao);
 	}
 }
