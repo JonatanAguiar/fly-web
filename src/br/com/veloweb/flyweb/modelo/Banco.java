@@ -8,6 +8,7 @@ public class Banco {
 	private static List<Usuario> listaDeUsuarios = new ArrayList<>();
 	private static List<Voo> listaDeVoos = new ArrayList<>();
 	private static List<Aviao> listaDeAvioes = new ArrayList<>();
+	private static List<Rota> listaDeRotas = new ArrayList<>();
 
 	static {
 		// Cria país
@@ -51,6 +52,10 @@ public class Banco {
 		rota1.setCidadeDestino(cidade4);
 		rota1.setCidadeOrigem(cidade1);
 
+		Rota rota2 = new Rota();
+		rota1.setCidadeDestino(cidade3);
+		rota1.setCidadeOrigem(cidade2);
+
 		// Cria aviões
 
 		Aviao aviao1 = new Aviao();
@@ -88,6 +93,10 @@ public class Banco {
 
 		listaDeUsuarios.add(user1);
 		listaDeUsuarios.add(user2);
+
+		listaDeRotas.add(rota1);
+		listaDeRotas.add(rota2);
+
 	}
 
 	public Usuario usuarioExiste(String login, String senha) {
@@ -105,5 +114,9 @@ public class Banco {
 
 	public List<Aviao> getAvioes() {
 		return listaDeAvioes;
+	}
+
+	public List<Rota> getRotas(){
+		return listaDeRotas;
 	}
 }
