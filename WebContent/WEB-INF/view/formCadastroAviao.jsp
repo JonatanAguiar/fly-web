@@ -9,19 +9,19 @@
 	<div class="form-row">
 		<div class="form-group col-md-6">
 			<label for="nome">Nome</label> <input type="text"
-				class="form-control" id="nome" >
+				class="form-control" name="nome" id="nome" >
 		</div>
 	</div>
 	
 	<div class="form-row">
 		<div class="form-group col-md-6">
 			<label for="modelo">Modelo</label> <input type="text"
-				class="form-control" id="modelo">
+				class="form-control" name="modelo" id="modelo">
 		</div>
 	</div>
 	<div class="form-row">
 		<div class="form-group col-md-3">
-			<label for="tipo">Tipo</label> <select id="tipo"
+			<label for="tipo">Tipo</label> <select nome="tipo" id="tipo"
 				class="form-control">
 				<option value="0">Doméstico</option>
 				<option value="1">Internacional</option>

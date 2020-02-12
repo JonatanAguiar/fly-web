@@ -1,18 +1,27 @@
 package br.com.veloweb.flyweb.acao;
 
-import java.io.IOException;
-
-import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+
+import br.com.veloweb.flyweb.modelo.Aviao;
+import br.com.veloweb.flyweb.modelo.Banco;
 
 public class AviaoCadastra implements Acao {
 
 	@Override
-	public String executa(HttpServletRequest request, HttpServletResponse response)
-			throws ServletException, IOException {
-		// TODO Auto-generated method stub
-		return null;
+	public String executa(HttpServletRequest request, HttpServletResponse response) {
+		System.out.println(request.getParameter("modelo"));
+		
+		
+		Aviao aviao = new Aviao();
+		aviao.setModelo(request.getParameter("modelo"));
+		aviao.setNome(request.getParameter("nome"));
+		aviao.setTipo(Boolean.parseBoolean(request.getParameter("tipo")));
+		
+		Banco banco = new Banco();
+		banco.adicionaAviao(aviao);
+		
+		return "redirect:AviaoLista";
 	}
 
 }
