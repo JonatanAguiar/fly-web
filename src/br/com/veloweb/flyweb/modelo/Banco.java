@@ -1,5 +1,6 @@
 package br.com.veloweb.flyweb.modelo;
 
+import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -70,12 +71,16 @@ public class Banco {
 		aviao2.setTipo(false);
 		aviao2.setModelo("12");
 		aviao2.setNome("Alejandro");
+		
+		listaDeAvioes.add(aviao1);
+		listaDeAvioes.add(aviao2);
 
 		// Cria voo
 
 		Voo voo1 = new Voo();
 		Voo voo2 = new Voo();
 
+		voo1.setDataEHora(LocalDateTime.now());
 		voo1.setAviao(aviao1);
 		voo1.setRota(rota1);
 		voo1.setId(1);
