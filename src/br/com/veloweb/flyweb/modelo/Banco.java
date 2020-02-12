@@ -9,11 +9,8 @@ public class Banco {
 	private static List<Usuario> listaDeUsuarios = new ArrayList<>();
 	private static List<Voo> listaDeVoos = new ArrayList<>();
 	private static List<Aviao> listaDeAvioes = new ArrayList<>();
-<<<<<<< HEAD
 	private static Integer contadorDeAvioes = 1;
-=======
 	private static List<Rota> listaDeRotas = new ArrayList<>();
->>>>>>> ed25838e51a5d97b6b2566c1175b3626f1ac39c5
 
 	static {
 		// Cria país
@@ -75,7 +72,7 @@ public class Banco {
 		aviao2.setTipo(false);
 		aviao2.setModelo("12");
 		aviao2.setNome("Alejandro");
-		
+
 		listaDeAvioes.add(aviao1);
 		listaDeAvioes.add(aviao2);
 
@@ -125,13 +122,13 @@ public class Banco {
 		return listaDeAvioes;
 	}
 
-<<<<<<< HEAD
+
 	public void adicionaAviao(Aviao aviao) {
 		aviao.setId(contadorDeAvioes++);
 		listaDeAvioes.add(aviao);
-=======
-	public List<Rota> getRotas(){
+	}
+		
+	public List<Rota> getRotas() {
 		return listaDeRotas;
->>>>>>> ed25838e51a5d97b6b2566c1175b3626f1ac39c5
 	}
 }
