@@ -1,9 +1,18 @@
 package br.com.veloweb.flyweb.modelo;
 
-public class Cidade {
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+import javax.persistence.ManyToOne;
 
+@Entity
+public class Cidade {
+	
+	@Id
+	@GeneratedValue
 	private Integer id;
 	private String nome;
+	@ManyToOne 
 	private Pais pais;
 	
 	public Integer getId() {
