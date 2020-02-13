@@ -1,5 +1,8 @@
 package br.com.veloweb.flyweb.acao;
 
+import java.io.IOException;
+import java.util.List;
+
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -16,7 +19,7 @@ public class RotaLista implements Acao {
 		
 		request.setAttribute("listaDeRotas", lista);
 		
-		//return "fw:listaVoo.jsp";
+		return "fw:listaVoo.jsp";
 	}
 
 }
