@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
 	pageEncoding="ISO-8859-1"%>
+<%@ page import="br.com.veloweb.flyweb.modelo.Usuario"%>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -36,6 +37,9 @@
 		
 	<nav class="navbar navbar-expand-lg navbar-light"
 		style="background-color: #e3f2fd;">
+		
+		
+		
 		<a class="navbar-brand" href="#" style="margin-right: 50%; margin-left: 5%;">Fly-Web:
 			Gerenciamento de Voos</a>
 		<button class="navbar-toggler" type="button" data-toggle="collapse"
@@ -66,8 +70,8 @@
 						<a class="dropdown-item" href="index?acao=AviaoCadastraForm">Cadastro</a>
 						<a class="dropdown-item" href="index?acao=AviaoLista">Lista</a>
 					</div></li>
-
-				</li>
 			</ul>
+			
+			
 		</div>
 	</nav>

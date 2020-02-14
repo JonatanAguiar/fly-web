@@ -18,6 +18,8 @@ public class AviaoCadastra implements Acao {
 		aviao.setNome(request.getParameter("nome"));
 		aviao.setTipo(Boolean.parseBoolean(request.getParameter("tipo")));
 		
+		System.out.println(Boolean.parseBoolean(request.getParameter("tipo")));
+
 		Banco banco = new Banco();
 		banco.adicionaAviao(aviao);
 		

@@ -23,8 +23,8 @@
 		<div class="form-group col-md-3">
 			<label for="tipo">Tipo</label> <select nome="tipo" id="tipo"
 				class="form-control">
-				<option value="0">Doméstico</option>
-				<option value="1">Internacional</option>
+				<option value="false">Doméstico</option>
+				<option value="true">Internacional</option>
 			</select>
 		</div>
 	</div>

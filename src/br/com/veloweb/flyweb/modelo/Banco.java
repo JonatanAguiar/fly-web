@@ -55,8 +55,8 @@ public class Banco {
 		rota1.setCidadeOrigem(cidade1);
 
 		Rota rota2 = new Rota();
-		rota1.setCidadeDestino(cidade3);
-		rota1.setCidadeOrigem(cidade2);
+		rota2.setCidadeDestino(cidade3);
+		rota2.setCidadeOrigem(cidade2);
 
 		// Cria aviões
 
@@ -80,7 +80,7 @@ public class Banco {
 
 		Voo voo1 = new Voo();
 		Voo voo2 = new Voo();
-
+		
 		voo1.setDataEHora(LocalDateTime.now());
 		voo1.setAviao(aviao1);
 		voo1.setRota(rota1);

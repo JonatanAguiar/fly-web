@@ -18,7 +18,7 @@
 		<tbody>
 			<c:forEach items="${listaDeVoos}" var="voo">
 				<tr>
-					<th scope="row">Horário</th>
+					<th scope="row">${voo.dataEHora } </th>
 					<th>${voo.rota.cidadeOrigem.nome}</th>
 					<td>${voo.rota.cidadeDestino.nome}</td>
 					<td>Escalas</td>

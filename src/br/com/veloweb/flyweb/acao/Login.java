@@ -21,10 +21,10 @@ public class Login implements Acao {
 
 		if(user != null) {
 			HttpSession session = request.getSession();
-			session.setAttribute("usuarioLogado", login);
-			return "rd:index";
+			session.setAttribute("usuarioLogado", user);
+			return "rd:VoosLista";
 		} else {
-			return "rd:index?acao=LoginForm";
+			return "rd:LoginForm";
 		}
 	}
 
