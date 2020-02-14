@@ -11,6 +11,7 @@ public class Banco {
 	private static List<Aviao> listaDeAvioes = new ArrayList<>();
 	private static Integer contadorDeAvioes = 1;
 	private static List<Rota> listaDeRotas = new ArrayList<>();
+	private static List<Cidade> listaDeCidades = new ArrayList<>();
 
 	static {
 		// Cria país
@@ -47,6 +48,11 @@ public class Banco {
 		cidade4.setId(4);
 		cidade4.setNome("Sao Paulo");
 		cidade4.setPais(pais2);
+		
+		listaDeCidades.add(cidade1);
+		listaDeCidades.add(cidade2);
+		listaDeCidades.add(cidade3);
+		listaDeCidades.add(cidade4);
 
 		// Cria Rota
 
@@ -131,4 +137,9 @@ public class Banco {
 	public List<Rota> getRotas() {
 		return listaDeRotas;
 	}
+
+	public List<Cidade> getListaDeCidades() {
+		return listaDeCidades;
+	}
+	
 }

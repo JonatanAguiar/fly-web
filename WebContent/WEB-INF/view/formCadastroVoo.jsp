@@ -10,10 +10,14 @@
 	<br>
 	<form method="POST" action="index?acao=AviaoCadastra">
 		<div class="form-row">
-			<div class="form-group col-md-8">
-				<label for="rota">Rota</label> <select
-					id="rota" class="form-control">
-					<option value="0">Selecione...</option>
+			<div class="form-group col-md-4">
+				<label for="rota">Cidade Origem</label> <select onchange="listaPossiveisDestinos()"
+					id="cidadeOrigem" class="form-control">
+				</select>
+			</div>
+			<div class="form-group col-md-4">
+				<label for="rota">Cidade Destino</label> <select
+					id="cidadeDestino" class="form-control">
 				</select>
 			</div>
 		</div>
@@ -60,7 +64,7 @@
 </div>
 
 <script type="text/javascript" src='<c:url value="js/form.js"></c:url>'></script>
-<script type="text/javascript" src='<c:url value="js/carregaRotas.js"></c:url>'></script>
+<script type="text/javascript" src='<c:url value="js/carregaDadosJSON.js"></c:url>'></script>
 
 </body>
 </html>
