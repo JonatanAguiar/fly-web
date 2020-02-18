@@ -43,7 +43,7 @@
 		</div>
 		<div class="form-row">
 			<div class="form-group col-md-8">
-				<label for="tipo">Avião</label> <select id="tipo"
+				<label for="tipo">Avião</label> <select id="aviao"
 					class="form-control">
 					<option value="0">Selecione um avião</option>
 				</select>

@@ -17,10 +17,10 @@ function populaDadosJSON(nome, nomeDoSelect){
 	xmlhttp.send();
 }
 
-function criaOption(cidade){
+function criaOption(x){
 	var r = document.createElement("option");
-	r.text = cidade.nome;
-	r.value = cidade.id;
+	r.text = x.nome;
+	r.value = x.id;
 	return r;
 }
 

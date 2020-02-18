@@ -1,7 +1,8 @@
 populaDadosJSON("rotas", "cidadeOrigem");
-populaEscalas();
+var rotas = pegaDadosJSON("rotas");
+var cidades = pegaDadosJSON("cidades");
+var avioes = pegaDadosJSON("aviao");
 
-var array = pegaDadosJSON("rotas");
 var paramRota;
 
 function listaPossiveisDestinos(){
@@ -13,19 +14,48 @@ function listaPossiveisDestinos(){
 	
 	var origemValue = document.querySelector("#cidadeOrigem").value;
 	
-	array.forEach( function(rota){
+	rotas.forEach( function(rota){
 		if(rota.cidadeOrigem.id == origemValue){
 			destino.options.add(criaOption(rota.cidadeDestino));
 			paramRota = rota;
 		}
 	});
 	
+	populaEscalas();
+	populaAvioes();
 //	verificaSeSaoPaisesDiferentes(paramRota.cidadeOrigem.pais.id, paramRota.cidadeDestino.pais.id);
 }
 
+
 function populaEscalas(){
-	var escalas = document.querySelector(".escala");
-	console.log(escalas);
+	var e1 = document.querySelector("#escala1");
+	var e2 = document.querySelector("#escala2");
+	var e3 = document.querySelector("#escala3");
+	var escalas = [e1, e2, e3];
+	
+	escalas.forEach(function(e){
+		$(e).empty();
+	});
+	
+	cidades.forEach(function(cidade){
+		escalas.forEach(function(escala){
+			escala.options.add(criaOption(cidade));
+		});
+	});
+}
+
+function populaAvioes(){
+	var select = document.querySelector("#aviao");
+	
+	$(select).empty();
+	
+	console.log(avioes);
+	
+	avioes.forEach(function (a){
+		console.log(a);
+		
+		select.options.add(criaOption(a));
+	});
 }
 
 function verificaSeSaoPaisesDiferentes(pais1, pais2){
