@@ -16,10 +16,11 @@
 				</select>
 			</div>
 			<div class="form-group col-md-4">
-				<label for="rota">Cidade Destino</label> <select 
+				<label for="rota">Cidade Destino</label> <select onchange="onChangeDestino()"
 					id="cidadeDestino" class="form-control">
 				</select>
 			</div>
+			<input type="hidden" id="idDaRota"/>
 		</div>
 		<div class="form-row">
 			<div class="form-group col-md-4">

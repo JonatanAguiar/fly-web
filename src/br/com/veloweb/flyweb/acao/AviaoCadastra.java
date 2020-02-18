@@ -10,15 +10,12 @@ public class AviaoCadastra implements Acao {
 
 	@Override
 	public String executa(HttpServletRequest request, HttpServletResponse response) {
-		System.out.println(request.getParameter("modelo"));
-		
 		
 		Aviao aviao = new Aviao();
 		aviao.setModelo(request.getParameter("modelo"));
 		aviao.setNome(request.getParameter("nome"));
 		aviao.setTipo(Boolean.parseBoolean(request.getParameter("tipo")));
 		
-		System.out.println(Boolean.parseBoolean(request.getParameter("tipo")));
 
 		Banco banco = new Banco();
 		banco.adicionaAviao(aviao);
