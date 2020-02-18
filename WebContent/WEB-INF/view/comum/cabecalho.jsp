@@ -40,7 +40,7 @@
 		
 		
 		
-		<a class="navbar-brand" href="#" style="margin-right: 50%; margin-left: 5%;">Fly-Web:
+		<a class="navbar-brand" href="./" style="margin-right: 50%; margin-left: 5%;">Fly-Web:
 			Gerenciamento de Voos</a>
 		<button class="navbar-toggler" type="button" data-toggle="collapse"
 			data-target="#navbarSupportedContent"
