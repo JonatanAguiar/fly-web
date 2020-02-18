@@ -8,7 +8,7 @@
 <div class="container">
 	<h3 class="text-center" style="margin-top: 2%;">Cadastrar Voo</h3>
 	<br>
-	<form method="POST" action="index?acao=AviaoCadastra">
+	<form method="POST" action="index?acao=VooCadastra">
 		<div class="form-row">
 			<div class="form-group col-md-4">
 				<label for="rota">Cidade Origem</label> <select onchange="listaPossiveisDestinos()"
@@ -16,7 +16,7 @@
 				</select>
 			</div>
 			<div class="form-group col-md-4">
-				<label for="rota">Cidade Destino</label> <select
+				<label for="rota">Cidade Destino</label> <select 
 					id="cidadeDestino" class="form-control">
 				</select>
 			</div>
@@ -24,19 +24,19 @@
 		<div class="form-row">
 			<div class="form-group col-md-4">
 				<label for="escala1">Escala 1</label> <select
-					id="escala1" class="form-control">
+					id="escala1" class="form-control escala">
 					<option value="0">Selecione...</option>
 				</select>
 			</div>
 			<div class="form-group col-md-4">
 				<label for="escala2">Escala 2</label> <select
-					id="escala2" class="form-control">
+					id="escala2" class="form-control escala">
 					<option value="0">Selecione...</option>
 				</select>
 			</div>
 			<div class="form-group col-md-4">
 				<label for="escala3">Escala 3</label> <select
-					id="escala3" class="form-control">
+					id="escala3" class="form-control escala">
 					<option value="0">Selecione...</option>
 				</select>
 			</div>
@@ -63,8 +63,8 @@
 	</form>
 </div>
 
-<script type="text/javascript" src='<c:url value="js/form.js"></c:url>'></script>
 <script type="text/javascript" src='<c:url value="js/carregaDadosJSON.js"></c:url>'></script>
+<script type="text/javascript" src='<c:url value="js/form.js"></c:url>'></script>
 
 </body>
 </html>

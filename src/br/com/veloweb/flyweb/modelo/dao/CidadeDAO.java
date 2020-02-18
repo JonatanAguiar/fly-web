@@ -51,7 +51,7 @@ public class CidadeDAO {
 		List<Cidade> cidades = null;
 		
 		try {
-			cidades = em.createQuery("from Cidades c").getResultList();
+			cidades = em.createQuery("from Cidade c").getResultList();
 		} catch (Exception e) {
 			System.err.println(e);
 		}finally {

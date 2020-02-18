@@ -51,7 +51,7 @@ public class RotaDAO {
 		List<Rota> rotas = null;
 		
 		try {
-			rotas = em.createQuery("from Rotas c").getResultList();
+			rotas = em.createQuery("from Rota r").getResultList();
 		} catch (Exception e) {
 			System.err.println(e);
 		}finally {

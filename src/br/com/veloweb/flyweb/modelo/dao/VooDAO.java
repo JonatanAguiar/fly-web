@@ -51,7 +51,7 @@ public class VooDAO {
 		List<Voo> voos = null;
 		
 		try {
-			voos = em.createQuery("from Voos c").getResultList();
+			voos = em.createQuery("from Voo v").getResultList();
 		} catch (Exception e) {
 			System.err.println(e);
 		}finally {

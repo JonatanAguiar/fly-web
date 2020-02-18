@@ -1,6 +1,5 @@
 package br.com.veloweb.flyweb.modelo;
 
-import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
 

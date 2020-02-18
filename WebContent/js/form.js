@@ -1,31 +1,62 @@
-var cidadeOrigem = document.querySelector("#cidadeOrigem");
-var cidadeDestino = document.querySelector("#cidadeDestino");
+populaDadosJSON("rotas", "cidadeOrigem");
+populaEscalas();
 
-function adicionaCidadeNoSelectOrigem(cidade){
-	var r = document.createElement("option");
-	r.text = cidade.nome;
-	r.value = cidade.id;
-	cidadeOrigem.options.add(r);
-}
+var array = pegaDadosJSON("rotas");
+var paramRota;
 
-
-//bugado.. não está iterando
 function listaPossiveisDestinos(){
-	var array = pegaDadosJSON("cidades");
-	
-	console.log(array);
+	var destino = document.querySelector("#cidadeDestino");
 
-	array.forEach( function(cidade){
-		if(cidadeOrigem.value != cidade.id){
-			cidadeDestino.options.add(criaOption(r));
+	if(destino.length > 0){
+		$("#cidadeDestino").empty();
+	}
+	
+	var origemValue = document.querySelector("#cidadeOrigem").value;
+	
+	array.forEach( function(rota){
+		if(rota.cidadeOrigem.id == origemValue){
+			destino.options.add(criaOption(rota.cidadeDestino));
+			paramRota = rota;
 		}
 	});
 	
+//	verificaSeSaoPaisesDiferentes(paramRota.cidadeOrigem.pais.id, paramRota.cidadeDestino.pais.id);
 }
 
-function criaOption(cidade){
-	var r = document.createElement("option");
-	r.text = cidade.nome;
-	r.value = cidade.id;
-	return r;
+function populaEscalas(){
+	var escalas = document.querySelector(".escala");
+	console.log(escalas);
 }
+
+function verificaSeSaoPaisesDiferentes(pais1, pais2){
+	if(pais1 != pais2){
+		liberaEscala("1");
+	} else {
+		desabilitaEscalas();
+	}
+}
+
+function liberaEscala(i){
+	var escala = document.querySelector("#escala"+i);
+	escala.disabled = false;
+	
+	var cidades = pegaDadosJSON("cidades");
+	
+	if(escala.length > 0){
+		$(escala).empty();
+	}
+	
+	cidades.forEach( function(cidade){
+		console.log(cidade);
+		escala.options.add(criaOption(cidade));
+	});
+}
+
+function desabilitaEscalas(){
+	document.querySelector("#escala1").disabled = true;
+	document.querySelector("#escala2").disabled = true;
+	document.querySelector("#escala3").disabled = true;
+}
+
+
+

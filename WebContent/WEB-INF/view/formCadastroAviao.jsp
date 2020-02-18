@@ -4,7 +4,6 @@
 <c:import url="comum/cabecalho.jsp" />
 <div class="container">
 <h3 class="text-center" style="margin-top: 2%;">Cadastrar Avião</h3>
-</br>
 <form method="POST" action="index?acao=AviaoCadastra" name="aviaoCadastra" id="aviaoCadastra">
 	<div class="form-row">
 		<div class="form-group col-md-6">

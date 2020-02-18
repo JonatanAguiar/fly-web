@@ -51,7 +51,7 @@ public class PaisDAO {
 		List<Pais> paises = null;
 		
 		try {
-			paises = em.createQuery("from Paiss c").getResultList();
+			paises = em.createQuery("from Pais p").getResultList();
 		} catch (Exception e) {
 			System.err.println(e);
 		}finally {
