@@ -4,8 +4,12 @@ import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
 
+import br.com.veloweb.flyweb.modelo.dao.AviaoDAO;
+
 public class Banco {
 
+	AviaoDAO aviaoDAO = new AviaoDAO();
+	
 	private static List<Usuario> listaDeUsuarios = new ArrayList<>();
 	private static List<Voo> listaDeVoos = new ArrayList<>();
 	private static List<Aviao> listaDeAvioes = new ArrayList<>();
@@ -125,13 +129,12 @@ public class Banco {
 	}
 
 	public List<Aviao> getAvioes() {
-		return listaDeAvioes;
+		return aviaoDAO.findAll();
 	}
 
 
 	public void adicionaAviao(Aviao aviao) {
-		aviao.setId(contadorDeAvioes++);
-		listaDeAvioes.add(aviao);
+		aviaoDAO.save(aviao);
 	}
 		
 	public List<Rota> getRotas() {

@@ -17,7 +17,7 @@ import br.com.veloweb.flyweb.modelo.Voo;
 /**
  * Servlet implementation class ListaVooService
  */
-@WebServlet("/voos")
+@WebServlet("/aviao")
 public class ListaAviaoService extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
