@@ -19,7 +19,7 @@ public class ListaCidadesService extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
 	protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		List<Cidade> cidades = new Banco().getListaDeCidades();
+		List<Cidade> cidades = new Banco().getCidades();
 		Gson gson = new Gson();
 		String json = gson.toJson(cidades);
 		
