@@ -16,7 +16,7 @@ function listaPossiveisDestinos(){
 	
 	rotas.forEach( function(rota){
 		if(rota.cidadeOrigem.id == origemValue){
-			destino.options.add(criaOption(rota.cidadeDestino));
+			destino.options.add(criaOption2(rota.cidadeDestino));
 			paramRota = rota;
 		}
 	});
@@ -65,16 +65,24 @@ function populaEscalas(){
 function populaAvioes(){
 	var select = document.querySelector("#aviao");
 	
+	
+	var paisOrigem = document.getElementById("cidadeOrigem").getAttribute("idpais");
+	var paisDestino = document.getElementById("cidadeDestino").getAttribute("idpais");
+	
+	if(paisOrigem != paisDestino){
+		var tipo = true;
+	}else{
+		var tipo = false;
+		desabilitaEscalas();
+	}
 	$(select).empty();
-	
-//	console.log(avioes);
-	
 	avioes.forEach(function (a){
 		console.log(a);
-		
-		select.options.add(criaOption(a));
+		if(a.tipo == tipo)
+			select.options.add(criaOption(a));
 	});
 }
+
 
 function verificaSeSaoPaisesDiferentes(pais1, pais2){
 	if(pais1 != pais2){

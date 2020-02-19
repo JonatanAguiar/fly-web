@@ -4,15 +4,16 @@
 <c:import url="comum/cabecalho.jsp" />
 <%@ page import="java.util.List, br.com.veloweb.flyweb.modelo.Rota" %>
 
-<!--  <script type="text/javascript" src="<c:url value="/js/jquery-ui.js"/>"></script>-->
+
 <div class="container">
 	<h3 class="text-center" style="margin-top: 2%;">Cadastrar Voo</h3>
 	<br>
-	<form method="POST" action="index?acao=VooCadastra">
+	<form method="POST" action="index?acao=VooCadastra" id="vooCadastra">
 		<div class="form-row">
 			<div class="form-group col-md-4">
 				<label for="rota">Cidade Origem</label> <select onchange="listaPossiveisDestinos()"
 					id="cidadeOrigem" class="form-control">
+					<option value="0" idpais="0" >Selecione uma origem </option>
 				</select>
 			</div>
 			<div class="form-group col-md-4">
@@ -66,6 +67,7 @@
 
 <script type="text/javascript" src='<c:url value="js/carregaDadosJSON.js"></c:url>'></script>
 <script type="text/javascript" src='<c:url value="js/form.js"></c:url>'></script>
+<script type="text/javascript" src='<c:url value="js/validaFormVoo.js"></c:url>'></script>
 
 </body>
 </html>
