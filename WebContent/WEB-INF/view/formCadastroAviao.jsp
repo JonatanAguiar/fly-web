@@ -3,7 +3,8 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <c:import url="comum/cabecalho.jsp" />
 <div class="container">
-<h3 class="text-center" style="margin-top: 2%;">Cadastrar Avião</h3>
+
+<h3 class="text-center" style="margin-top: 2%;"><img src='<c:url value="img/document.png"></c:url>' width="30" height="30" alt="" >Cadastrar Avião</h3>
 <form method="POST" action="index?acao=AviaoCadastra" name="aviaoCadastra" id="aviaoCadastra">
 	<div class="form-row">
 		<div class="form-group col-md-6">
