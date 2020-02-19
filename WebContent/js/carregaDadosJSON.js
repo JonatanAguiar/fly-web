@@ -4,13 +4,14 @@ function populaDadosJSON(nome, nomeDoSelect){
 	var xmlhttp = new XMLHttpRequest();
 
 	var url = "http://localhost:8080/FlyWeb/" + nome;
+	console.log(url);
 	xmlhttp.open("GET", url);
 
 	xmlhttp.addEventListener("load", function() {
 		var resposta = xmlhttp.responseText;
 		var lista = JSON.parse(resposta);
 		lista.forEach(function(x) {
-			select.options.add(criaOption(x.cidadeOrigem));
+			select.options.add(criaOption2(x.cidadeOrigem,nomeDoSelect,x.id));
 		});
 	});
 
@@ -21,6 +22,18 @@ function criaOption(x){
 	var r = document.createElement("option");
 	r.text = x.nome;
 	r.value = x.id;
+	return r;
+}
+
+function criaOption2(x, tipo, id){
+	var r = document.createElement("option");
+	r.text = x.nome;
+	r.value = x.id;
+	r.setAttribute("idpais", x.pais.id);
+	
+	/*if(tipo == "cidadeOrigem"){
+		r.setAttribute("idrota", id);
+	}*/
 	return r;
 }
 
