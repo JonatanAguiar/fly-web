@@ -28,7 +28,6 @@
 		</tbody>
 	</table>
 </div>
-
-
+<c:import url="comum/rodape.jsp" />
 </body>
 </html>

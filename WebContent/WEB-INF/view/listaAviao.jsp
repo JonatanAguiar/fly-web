@@ -23,6 +23,7 @@
 						<c:choose>
 						<c:when test="${aviao.tipo == 'true'}">
 							Internacional
+							
 						</c:when>
 						
 						<c:otherwise>
@@ -36,6 +37,6 @@
 		</tbody>
 	</table>
 </div>
-
+<c:import url="comum/rodape.jsp" />
 </body>
 </html>
