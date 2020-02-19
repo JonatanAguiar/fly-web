@@ -1,0 +1,12 @@
+@charset "ISO-8859-1";
+
+#logo{
+	height: 200px;
+	width: 200px; 
+}
+.our-color{
+	background-color: #e3f2fd;
+}
+#navbar{
+	margin-right: 50%; margin-left: 5%;
+}
