@@ -31,6 +31,7 @@
 	<button type="submit" class="btn btn-primary">Cadastrar</button>
 </form>
 </div>
+<c:import url="comum/rodape.jsp" />
 <script type="text/javascript" src='<c:url value="js/validaFormAviao.js"></c:url>'></script>
 </body>
 </html>
