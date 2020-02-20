@@ -21,7 +21,9 @@
 					<th scope="row">${voo.dataEHora } </th>
 					<th>${voo.rota.cidadeOrigem.nome}</th>
 					<td>${voo.rota.cidadeDestino.nome}</td>
-					<td>Escalas</td>
+					<td>
+					Lista de escalas
+					</td>
 					<td>${voo.aviao.nome} - ${voo.aviao.modelo}</td>
 				</tr>
 			</c:forEach>

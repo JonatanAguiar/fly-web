@@ -10,7 +10,7 @@ function populaDadosJSON(nome, nomeDoSelect){
 		var resposta = xmlhttp.responseText;
 		var lista = JSON.parse(resposta);
 		lista.forEach(function(x) {
-			select.options.add(criaOption(x.cidadeOrigem));
+			select.options.add(criaOption2(x.cidadeOrigem,nomeDoSelect,x.id));
 		});
 	});
 
@@ -21,6 +21,15 @@ function criaOption(x){
 	var r = document.createElement("option");
 	r.text = x.nome;
 	r.value = x.id;
+	return r;
+}
+
+function criaOption2(x, tipo, id){
+	var r = document.createElement("option");
+	r.text = x.nome;
+	r.value = x.id;
+	r.setAttribute("idpais", x.pais.id);
+
 	return r;
 }
 

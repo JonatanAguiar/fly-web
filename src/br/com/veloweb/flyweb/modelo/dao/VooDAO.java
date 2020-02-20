@@ -5,6 +5,7 @@ import java.util.List;
 import javax.persistence.EntityManager;
 
 import br.com.veloweb.flyweb.connection.ConnectionFactory;
+import br.com.veloweb.flyweb.modelo.Cidade;
 import br.com.veloweb.flyweb.modelo.Voo;
 
 public class VooDAO {
@@ -79,4 +80,5 @@ public class VooDAO {
 		
 		return voo;		
 	}
+	
 }
